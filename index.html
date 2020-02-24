@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <Title>Assembly string creator</Title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="logic.js"></script>
+  </head>
+
+  <body>
+    <h1>Assembly string creator</h1>
+    <textarea id="in" class="elem" rows="25" cols="80"></textarea>
+    <div class="elem">
+      <input type="checkbox" id="fill" onclick="enableSelect()" checked />
+      fill screen
+    </div>
+    <div class="elem">
+      <input type="checkbox" id="keep" />
+      keep propositions
+    </div>
+
+    <div class="elem">
+      vertical align
+      <select id="va" class="elem">
+        <option value="up">up</option>
+        <option value="center" selected="selected">center</option>
+        <option value="down">down</option>
+      </select>
+    </div>
+
+    <div class="elem">
+      horizontal align
+      <select id="ha" class="elem">
+        <option value="right">right</option>
+        <option value="center" selected="selected">center</option>
+        <option value="left">left</option>
+      </select>
+    </div>
+
+    <button class="elem" onclick="convert()">convert</button>
+
+    <textarea id="out" class="elem" rows="25" cols="80"></textarea>
+  </body>
+</html>

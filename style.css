@@ -32,6 +32,19 @@ a{
   display: block;
 }
 
+select{
+  text-align: center;
+}
+
+#fill{
+  text-align: center;
+}
+
+
+#keep{
+  text-align: center;
+}
+
 .checkBoxOpt{
   text-align: center;
   display: block;

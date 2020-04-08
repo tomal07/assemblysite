@@ -1,86 +1,101 @@
 <html lang="he">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67521007-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67521007-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-67521007-2');
-  </script>
-  <Title>מייצר מחרוזות באסמבלי</Title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" href="icon1.png">
-  <script src="logic.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        gtag('config', 'UA-67521007-2');
+    </script>
+    <Title>מייצר מחרוזות באסמבלי</Title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="icon1.png">
+    <script src="logic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <div class="lang">
-  <i class="fa fa-language" aria-hidden="true"></i>
-  <a href="index.html" class="lang">האתר באנגלית</a>
-</div>
-  <h1>מייצר מחרוזות באסמבלי</h1>
-  <p>. יוצר משתנה של מחרוזת מרובת שורות באסמבלי מהטקסט שנכתב מבלי להעתיק כל שורה בנפרד ונותן אפשרות למירכוז אוטומטי של הטקסט</p>
-  <p>( ax=2h,int 10h,נוצר למצב הטקסט הרגיל של 85 על 25 בדוסבוקס(אסמבלי 8086</p>
-  <p>נוצר ע"י תומר אלדמע</p>
-  <a href="vid.mp4" target="_blank">ליחצו פה כדי לראות סרטון שמדגים את השימוש באתר</a>
-  <textarea id="in" class="elem" rows="25" cols="80"></textarea>
-
-  <div class="checkBoxOpt">
-    <input type="checkbox" id="fill" onclick="enableSelect()" checked />
-    שמור על פרופורציה
-    <input type="checkbox" id="keep" />
-    מלא את המסך
-  </div>
-
-  <div class="dropDownOpt">
-    <select id="va" class="elem">
-      <option value="up">למעלה</option>
-      <option value="center" selected="selected">אמצע</option>
-      <option value="down">למטה</option>
-    </select>
-    ישור אופקי
-
-    <select id="ha" class="elem">
-      <option value="right">ימין</option>
-      <option value="center" selected="selected">אמצע</option>
-      <option value="left">שמאל</option>
-    </select>
-    ישור אנכי
-
-  </div>
-
-  <button class="elem btn btn-primary" onclick="convert()">צור</button>
-  <textarea id="out" class="elem" rows="25" cols="80"></textarea>
-  <button onclick="copyOut()" class="elem btn btn-primary">העתק</button>
-
-  <div class="border-top my-3"></div>
-
-  <footer>
-    <div class="externalLinks">
-      <div class="githubLink">
-        <i class="fa fa-github" aria-hidden="true"></i>
-        <a class="pageLink" target="_blank" href="https://github.com/tomal07/assemblysite">הגיטהאב של הפרוייקט</a>
-      </div>
-      <div class="colorsLink">
-        <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
-        <a class="pageLink" target="_blank" href="https://en.wikipedia.org/wiki/BIOS_color_attributes">צבעים באסמבלי</a>
-      </div>
-      <div class="dosboxLink">
-        <i class="fa fa-download" aria-hidden="true"></i>
-        <a class="pageLink" target="_blank" href="https://www.dosbox.com/download.php?main=1"> dosbox הורד את </a>
-      </div>
+    <div class="lang">
+        <i class="fa fa-language" aria-hidden="true"></i>
+        <a href="index.html" class="lang">האתר באנגלית</a>
     </div>
-  </footer>
+    <h1>מייצר מחרוזות באסמבלי</h1>
+    <p>. יוצר משתנה של מחרוזת מרובת שורות באסמבלי מהטקסט שנכתב מבלי להעתיק כל שורה בנפרד ונותן אפשרות למירכוז אוטומטי של
+        הטקסט</p>
+    <p>( ax=2h,int 10h,נוצר למצב הטקסט הרגיל של 85 על 25 בדוסבוקס(אסמבלי 8086</p>
+    <p>נוצר ע"י תומר אלדמע</p>
+    <a href="vid.mp4" target="_blank">ליחצו פה כדי לראות סרטון שמדגים את השימוש באתר</a>
+    <textarea id="in" class="elem" rows="25" cols="80"></textarea>
+
+    <div class="checkBoxOpt">
+        <input type="checkbox" id="fill" onclick="enableSelect()" checked />
+        שמור על פרופורציה
+        <input type="checkbox" id="keep" />
+        מלא את המסך
+    </div>
+
+    <div class="dropDownOpt">
+        <select id="va" class="elem">
+            <option value="up">למעלה</option>
+            <option value="center" selected="selected">אמצע</option>
+            <option value="down">למטה</option>
+        </select>
+        ישור אופקי
+
+        <select id="ha" class="elem">
+            <option value="right">ימין</option>
+            <option value="center" selected="selected">אמצע</option>
+            <option value="left">שמאל</option>
+        </select>
+        ישור אנכי
+
+    </div>
+
+    <button class="elem btn btn-primary" onclick="convert()">צור</button>
+    <textarea id="out" class="elem" rows="25" cols="80"></textarea>
+    <button onclick="copyOut()" class="elem btn btn-primary">העתק</button>
+
+    <div class="border-top my-3"></div>
+
+    <footer>
+        <div class="externalLinks">
+            <div class="githubLink">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <a class="pageLink" target="_blank" href="https://github.com/tomal07/assemblysite">הגיטהאב של
+                    הפרוייקט</a>
+            </div>
+            <div class="colorsLink">
+                <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                <a class="pageLink" target="_blank" href="https://en.wikipedia.org/wiki/BIOS_color_attributes">צבעים
+                    באסמבלי</a>
+            </div>
+            <div class="dosboxLink">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                <a class="pageLink" target="_blank" href="https://www.dosbox.com/download.php?main=1"> dosbox הורד את
+                </a>
+            </div>
+            <div class="ascciArtLink">
+                <i class="fa fa-font" aria-hidden="true"></i>
+                <a class="pageLink" target="_blank"
+                    href="http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20">אתר ליצירת טקסט
+                    גדול שמורכב מתווים</a>
+            </div>
+            <div class="book">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <a class="pageLink" target="_blank"
+                    href="https://data.cyber.org.il/assembly/assembly_book.pdf">ספר מצויין על אסמבלי של גבהים</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 

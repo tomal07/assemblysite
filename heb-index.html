@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="he">
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -13,7 +13,7 @@
 
     gtag('config', 'UA-67521007-2');
   </script>
-  <Title>Assembly String Creator</Title>
+  <Title>מייצר מחרוזות באסמבלי</Title>
   <link rel="stylesheet" type="text/css" href="style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,43 +26,42 @@
 <body>
   <div class="lang">
   <i class="fa fa-language" aria-hidden="true"></i>
-  <a href="heb-index.html" class="lang">Hebrew site</a>
+  <a href="index.html" class="lang">האתר באנגלית</a>
 </div>
-  <h1>Assembly String Creator</h1>
-  <p>Makes a variable of multiline string that contains the given text without having to copy and paste each individual
-    line.</p>
-  <p>Made for the normal text mode (80x25 characters, ax=2h,int 10h) in dosbox(Assembly 8086).</p>
-  <p>Created by Tomer Aldema</p>
-  <a href="vid.mp4" target="_blank">Click here to watch an explanation video</a>
+  <h1>מייצר מחרוזות באסמבלי</h1>
+  <p>. יוצר משתנה של מחרוזת מרובת שורות באסמבלי מהטקסט שנכתב מבלי להעתיק כל שורה בנפרד ונותן אפשרות למירכוז אוטומטי של הטקסט</p>
+  <p>( ax=2h,int 10h,נוצר למצב הטקסט הרגיל של 85 על 25 בדוסבוקס(אסמבלי 8086</p>
+  <p>נוצר ע"י תומר אלדמע</p>
+  <a href="vid.mp4" target="_blank">ליחצו פה כדי לראות סרטון שמדגים את השימוש באתר</a>
   <textarea id="in" class="elem" rows="25" cols="80"></textarea>
 
   <div class="checkBoxOpt">
     <input type="checkbox" id="fill" onclick="enableSelect()" checked />
-    fill screen
+    שמור על פרופורציה
     <input type="checkbox" id="keep" />
-    keep propositions
+    מלא את המסך
   </div>
 
   <div class="dropDownOpt">
-    vertical align
     <select id="va" class="elem">
-      <option value="up">up</option>
-      <option value="center" selected="selected">center</option>
-      <option value="down">down</option>
+      <option value="up">למעלה</option>
+      <option value="center" selected="selected">אמצע</option>
+      <option value="down">למטה</option>
     </select>
+    ישור אופקי
 
-    horizontal align
     <select id="ha" class="elem">
-      <option value="right">right</option>
-      <option value="center" selected="selected">center</option>
-      <option value="left">left</option>
+      <option value="right">ימין</option>
+      <option value="center" selected="selected">אמצע</option>
+      <option value="left">שמאל</option>
     </select>
+    ישור אנכי
 
   </div>
 
-  <button class="elem btn btn-primary" onclick="convert()">convert</button>
+  <button class="elem btn btn-primary" onclick="convert()">צור</button>
   <textarea id="out" class="elem" rows="25" cols="80"></textarea>
-  <button onclick="copyOut()" class="elem btn btn-primary">Copy to clipboard</button>
+  <button onclick="copyOut()" class="elem btn btn-primary">העתק</button>
 
   <div class="border-top my-3"></div>
 
@@ -70,16 +69,15 @@
     <div class="externalLinks">
       <div class="githubLink">
         <i class="fa fa-github" aria-hidden="true"></i>
-        <a class="pageLink" target="_blank" href="https://github.com/tomal07/assemblysite">The Github repository</a>
+        <a class="pageLink" target="_blank" href="https://github.com/tomal07/assemblysite">הגיטהאב של הפרוייקט</a>
       </div>
       <div class="colorsLink">
         <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
-        <a class="pageLink" target="_blank" href="https://en.wikipedia.org/wiki/BIOS_color_attributes">Color values in
-          Assembly 8086</a>
+        <a class="pageLink" target="_blank" href="https://en.wikipedia.org/wiki/BIOS_color_attributes">צבעים באסמבלי</a>
       </div>
       <div class="dosboxLink">
         <i class="fa fa-download" aria-hidden="true"></i>
-        <a class="pageLink" target="_blank" href="https://www.dosbox.com/download.php?main=1">Download Dosbox</a>
+        <a class="pageLink" target="_blank" href="https://www.dosbox.com/download.php?main=1"> dosbox הורד את </a>
       </div>
     </div>
   </footer>

@@ -1,59 +1,83 @@
 <html>
-  <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-67521007-2"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
-	  gtag('config', 'UA-67521007-2');
-	</script>
-    <Title>Assembly string creator</Title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="logic.js"></script>
-  </head>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67521007-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <body>
-    <h1>Assembly string creator</h1>
-	<p><b>A video showing the usage of the site is in the bottom of the site</b></p>
-	<p>Made for the normal text mode (80x25, ax=2h,int 10h) in dosbox</p>
-	<p>By Tomer Aldema </p>
-    <textarea id="in" class="elem" rows="25" cols="80"></textarea>
-    <div class="elem">
-      <input type="checkbox" id="fill" onclick="enableSelect()" checked />
-      fill screen
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-67521007-2');
+  </script>
+  <Title>Assembly string creator</Title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="logic.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <h1>Assembly String Creator</h1>
+  <p>Makes a variable of multiline string that contains the given text without having to copy and paste each individual
+    line.</p>
+  <p>Made for the normal text mode (80x25 characters, ax=2h,int 10h) in dosbox(Assembly 8086).</p>
+  <p>Created by Tomer Aldema</p>
+  <a href="vid.mp4" target="_blank">Click here to watch an explanation video</a>
+  <textarea id="in" class="elem" rows="25" cols="80"></textarea>
+
+  <div class="checkBoxOpt">
+    <input type="checkbox" id="fill" onclick="enableSelect()" checked />
+    fill screen
+    <input type="checkbox" id="keep" />
+    keep propositions
+  </div>
+
+  <div class="dropDownOpt">
+    vertical align
+    <select id="va" class="elem">
+      <option value="up">up</option>
+      <option value="center" selected="selected">center</option>
+      <option value="down">down</option>
+    </select>
+
+    horizontal align
+    <select id="ha" class="elem">
+      <option value="right">right</option>
+      <option value="center" selected="selected">center</option>
+      <option value="left">left</option>
+    </select>
+
+  </div>
+
+  <button class="elem btn btn-primary" onclick="convert()">convert</button>
+  <textarea id="out" class="elem" rows="25" cols="80"></textarea>
+  <button onclick="copyOut()" class="elem btn btn-primary">Copy to clipboard</button>
+
+  <div class="border-top my-3"></div>
+</body>
+
+<footer>
+  <div class="externalLinks">
+    <div class="githubLink">
+      <i class="fa fa-github" aria-hidden="true"></i>
+      <a class="pageLink" target="_blank" href="https://github.com/tomal07/assemblysite">The Github repository</a>
     </div>
-    <div class="elem">
-      <input type="checkbox" id="keep" />
-      keep propositions
+    <div class="colorsLink">
+      <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+      <a class="pageLink" target="_blank" href="https://en.wikipedia.org/wiki/BIOS_color_attributes">Color values in
+        Assembly 8086</a>
     </div>
-
-    <div class="elem">
-      vertical align
-      <select id="va" class="elem">
-        <option value="up">up</option>
-        <option value="center" selected="selected">center</option>
-        <option value="down">down</option>
-      </select>
+    <div class="dosboxLink">
+      <i class="fa fa-download" aria-hidden="true"></i>
+      <a class="pageLink" target="_blank" href="https://www.dosbox.com/download.php?main=1">Download Dosbox</a>
     </div>
+  </div>
+</footer>
 
-    <div class="elem">
-      horizontal align
-      <select id="ha" class="elem">
-        <option value="right">right</option>
-        <option value="center" selected="selected">center</option>
-        <option value="left">left</option>
-      </select>
-    </div>
-
-    <button class="elem" onclick="convert()">convert</button>
-
-    <textarea id="out" class="elem" rows="25" cols="80"></textarea>
-
-    <video width="320" height="240" controls>
-      <source src="vid.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
-  </body>
 </html>

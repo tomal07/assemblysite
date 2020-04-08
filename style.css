@@ -19,5 +19,24 @@ video{
 }
 
 p{
-	text-align: center;
+  text-align: center;
+  line-height: 50%;
+}
+
+a{
+  text-align: center;
+}
+
+.dropDownOpt{
+  text-align: center;
+  display: block;
+}
+
+.checkBoxOpt{
+  text-align: center;
+  display: block;
+}
+
+.externalLinks{
+  text-align: center;
 }

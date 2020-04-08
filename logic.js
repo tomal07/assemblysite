@@ -123,3 +123,16 @@ function enableSelect() {
   document.getElementById("va").disabled = !document.getElementById("va")
     .disabled;
 }
+
+/* copies the output to the clipboard*/
+function copyOut() {
+  /* Get the text field */
+  var copyText = document.getElementById("out");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+}

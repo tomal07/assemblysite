@@ -34,7 +34,8 @@
   <p>Made for the normal text mode (80x25 characters, ax=2h,int 10h) in dosbox(Assembly 8086).</p>
   <p>Created by Tomer Aldema</p>
   <a href="vid.mp4" target="_blank">Click here to watch an explanation video</a>
-  <textarea id="in" class="elem" rows="25" cols="80"></textarea>
+  
+    <pre class="elem"><textarea id="inputText" class="elem"  rows="25" cols="80"></textarea></pre>
 
   <div class="checkBoxOpt">
     <input type="checkbox" id="fill" onclick="enableSelect()" checked />
@@ -45,14 +46,14 @@
 
   <div class="dropDownOpt">
     vertical align
-    <select id="va" class="elem">
+    <select id="verticalAlign" class="elem">
       <option value="up">up</option>
       <option value="center" selected="selected">center</option>
       <option value="down">down</option>
     </select>
 
     horizontal align
-    <select id="ha" class="elem">
+    <select id="horizontalAlign" class="elem">
       <option value="right">right</option>
       <option value="center" selected="selected">center</option>
       <option value="left">left</option>
@@ -61,7 +62,7 @@
   </div>
 
   <button class="elem btn btn-primary" onclick="convert()">convert</button>
-  <textarea id="out" class="elem" rows="25" cols="80"></textarea>
+  <pre class="elem"><textarea id="out" class="elem" readonly="true" rows="25" cols="80"></textarea></pre>
   <button onclick="copyOut()" class="elem btn btn-primary">Copy to clipboard</button>
 
   <div class="border-top my-3"></div>
